@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Nopol</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- card-form-cek-nopol -->
+    <section class="container">
+        <div class="d-flex justify-content-center align-self-center">
+            <div class="card text-center mt-5 mb-5" style="width: 50%;">
+                <div class="card-body">
+                    <h2 class="card-title font-weight-bold">Cek Nopol</h2>
+                    <hr>
+                    <form action="" onsubmit="validationNoPol()">
+                        <legend>Masukan Nomor Kendaraan Anda</legend>
+                        <div class="form-row justify-content-center">
+                            <div class="col-lg-2 mb-1 mt-1">
+                                <input onkeyup="this.value = this.value.toUpperCase()" type="text" required
+                                    maxlength="1" class="form-control" placeholder="BD" id="noPolDepan">
+                            </div>
+                            <div class="col-lg-2 mb-1 mt-1">
+                                <input type="tel" required max="9999" min="0000" maxlength="4" class="form-control"
+                                    placeholder="1234" id="noPol">
+                            </div>
+                            <div class="col-lg-2 mb-1 mt-1">
+                                <input onkeyup="this.value = this.value.toUpperCase()" type="text" required
+                                    maxlength="3" class="form-control" placeholder="EJR" id="noPolBelakang">
+                            </div>
+                        </div>
+                        <div class="form-row mt-4">
+                            <div class="col-lg mb-1 mt-1">
+                                <!-- btn-trigger-modal -->
+                                <button type="submit" class="btn btn-primary btn-lg col" data-toggle="modal"
+                                    data-target="#validationSubmit">Cek Nopol</button>
+                            </div>
+                            <div class="col-lg mb-1 mt-1">
+                                <button type="reset" class="btn btn-danger btn-lg col">Reset</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm text-center" style="font-family: 'Courier New', Courier, monospace;">
+                                by Bangef
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="validationSubmit" tabindex="-1" role="dialog"
+        aria-labelledby="validationSubmitTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold" id="validationSubmitTitle">Keterangan Nomer Polisi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="masukan1"></p>
+                    <p id="masukan2"></p>
+                    <p id="masukan3"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
